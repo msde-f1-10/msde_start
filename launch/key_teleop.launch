@@ -1,0 +1,11 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+	
+	<!--include setup launch-->
+	<include file="$(find msde_start)/launch/setup.launch" />
+
+	<node name="key_teleop_converter" pkg="teleop" type="key_teleop_converter" />
+	<node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" />
+
+</launch>
